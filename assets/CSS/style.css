@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Imperial_Script;
+    src: url(../Fonts/Imperial.ttf);
+}
+
+a {
+    text-decoration: none;
+}
+
+navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    background-color: #050A32;
+    color: white;
+    font-size: 48px;
+    font-family: Imperial_Script;
+    border-bottom: 5px solid #9A91B4;
+}
