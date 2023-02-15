@@ -3,6 +3,16 @@
     src: url(../Fonts/Imperial.ttf);
 }
 
+@font-face {
+    font-family: Yrsa_Italic;
+    src: url(../Fonts/Yrsa/Yrsa-Italic-VariableFont_wght.ttf)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -10,17 +20,108 @@ a {
 
 navbar {
     display: flex;
-    position: fixed;
+    position:fixed;
     top: 0;
     right: 0;
     left: 0;
     justify-content: space-around;
     align-items: center;
-    height: 75px;
+    height: 10vh;
     background-color: #050A32;
     color: white;
     font-size: 48px;
     font-family: Imperial_Script;
     border-bottom: 5px solid #9A91B4;
+    z-index: 2;
 }
 
+navbar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+/* SIDE MENU ---------------*/
+#sideMenu {
+    left: 0;
+    bottom: 0;
+    top: 0;
+    background-color: #050A32;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    
+    transition-duration: 0.35s;
+}
+.sideMenuClose {
+    transform: translate3d(-250px, 0, 0);
+}
+.sideMenuSubMenu {
+    padding-top: 12vh;
+    padding-left: 30px;
+}
+.sideMenuTitle {
+    color: white;
+    font-size: 32px;
+    font-family: Yrsa_Italic;
+    font-weight: 100;
+    text-decoration: underline;
+}
+.sideMenuSubMenuItem {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.sideMenuSubMenuItem a{
+    font-size: 24px;
+    text-decoration: none;
+    color: white;
+    font-family: Yrsa_Italic;
+}
+
+/* SIDE MENU END-----------------------*/
+
+/* Rétrecissement du main et background avec la sideBar */
+#background_img {
+    height: 90vh;
+    padding-top: 10vh;
+    position: fixed;
+    z-index: -1;
+    
+    transition-duration: 0.35s;
+}
+#mainWindow {
+    height: 90vh;
+    padding-top: 10vh;
+    color: white;
+    
+    transition-duration: 0.35s;
+}
+.NotFull {
+    width : calc(100% - 249px);
+    padding-left: 249px;
+}
+.Full {
+    width: 100%;
+    padding-left: 0;
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    /* Stop le rétrécissement du main pour le mettre en dessous de la sidebar*/
+    #background_img {
+        width : 100%;
+        padding-left: 0%;
+    }
+    #mainWindow {
+        width: 100%;
+        padding-left: 0%;
+    }
+
+    navbar {
+        font-size: 36px;
+    }
+} 

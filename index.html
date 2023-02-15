@@ -9,17 +9,73 @@
 </head>
 <body>
     <navbar>
-        <a class="burger_menu_icon">
+        <button id="burger_menu_icon" onclick="sideMenu()">
             <svg width="90px" height="90px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                 <g id="SVGRepo_iconCarrier"> <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"></path> 
                 </g>
             </svg>
-        </a>
+        </button>
         <a href="./index.html">Home</a>
         <a href="./index.html">Années</a>
         <a href="./index.html">Projets</a>
     </navbar>
+    <div id="sideMenu" class="sideMenuClose">
+        <div class="sideMenuSubMenu">
+            <a class="sideMenuTitle">Présentation</a>
+            <div class="sideMenuSubMenuItem">
+                <a>In a nutshell</a>
+                <a>Projets à l'affiche</a>
+            </div>
+        </div>
+        <div class="sideMenuSubMenu">
+            <a class="sideMenuTitle">Formation</a>
+            <div class="sideMenuSubMenuItem">
+                <a>Baccalauréat</a>
+                <a>Bachelor</a>
+            </div>
+        </div>
+        <div class="sideMenuSubMenu">
+            <a class="sideMenuTitle">Contact</a>
+            <div class="sideMenuSubMenuItem">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <img id="background_img" class="background_imgFull" src="./assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
+        <div id="mainWindow">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat velit metus, ultrices iaculis lorem egestas a. Aenean iaculis, lectus a bibendum fermentum, elit sem placerat est, sed malesuada mi velit sed mauris. Vestibulum euismod tristique rhoncus. Mauris est sapien, sodales vitae odio et, aliquam convallis dolor. Maecenas scelerisque iaculis eleifend. Donec non neque ac nisl gravida dictum. Integer viverra libero luctus lobortis porttitor. Pellentesque a nulla bibendum, volutpat nulla vitae, cursus elit. Proin sed ante eu enim interdum pharetra at eu nibh.
+
+Morbi sodales vel neque eget auctor. Phasellus mollis urna purus, id pretium mauris vulputate sed. Suspendisse auctor congue ipsum eget vehicula. Cras mollis hendrerit venenatis. In eget posuere nulla, eu commodo enim. Donec eget tempus turpis. Aliquam ipsum massa, tempus quis arcu non, commodo porta augue. Vestibulum dapibus elit id sem volutpat malesuada. Donec semper tempor orci. Cras lorem metus, accumsan nec diam vitae, auctor dignissim velit. Morbi aliquet ipsum id nisi ultricies, accumsan varius ante pellentesque. Duis non mi eget arcu commodo condimentum.
+
+Nam scelerisque in purus ut cursus. Mauris faucibus blandit augue si
+        </div>
+    </main>
 </body>
+
+<script>
+    function sideMenu() {
+        sMenu = document.getElementById('sideMenu')
+        bgImg = document.getElementById('background_img')
+        mWindow = document.getElementById('mainWindow')
+
+        // with sideBar
+        if (!sMenu.classList.contains('sideMenuClose')) {
+            sMenu.classList.add('sideMenuClose');
+            bgImg.classList.add('Full');
+            bgImg.classList.remove('NotFull');
+            mWindow.classList.add('Full');
+            mWindow.classList.remove('NotFull');
+        } else {
+        // fullscreen
+            sMenu.classList.remove('sideMenuClose');
+            bgImg.classList.remove('Full');
+            bgImg.classList.add('NotFull');
+            mWindow.classList.remove('Full');
+            mWindow.classList.add('NotFull');
+        }
+    }
+</script>
 </html>
