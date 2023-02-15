@@ -7,6 +7,10 @@
     font-family: Yrsa_Italic;
     src: url(../Fonts/Yrsa/Yrsa-Italic-VariableFont_wght.ttf)
 }
+@font-face {
+    font-family: Yrsa;
+    src: url(../Fonts/Yrsa/Yrsa-VariableFont_wght.ttf);
+}
 
 * {
     padding: 0;
@@ -16,6 +20,14 @@
 a {
     text-decoration: none;
     color: inherit;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    width: fit-content;
+    border: 0;
+    padding: 0;
 }
 
 navbar {
@@ -73,14 +85,14 @@ navbar button {
     display: flex;
     flex-direction: column;
 }
-.sideMenuSubMenuItem a{
+.sideMenuSubMenuItem button{
     font-size: 24px;
     text-decoration: none;
     color: white;
     font-family: Yrsa_Italic;
 }
-
 /* SIDE MENU END-----------------------*/
+
 
 /* Rétrecissement du main et background avec la sideBar */
 #background_img {
@@ -95,6 +107,10 @@ navbar button {
     height: 90vh;
     padding-top: 10vh;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
     
     transition-duration: 0.35s;
 }
@@ -106,7 +122,35 @@ navbar button {
     width: 100%;
     padding-left: 0;
 }
+/* END */
 
+
+/* MAIN */
+h1 {
+    font-size: 32px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+    padding: 50px;
+}
+.leftBlockText {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 35%;
+    color: white;
+    font-family: Yrsa;
+    font-size: 24px;
+    font-weight: lighter;
+}
+.leftBlockText h2 {
+    font-family: Yrsa_Italic;
+    font-weight: normal;
+    font-size: 35px;;
+    text-decoration: underline;
+    
+}
 
 
 @media screen and (max-width: 600px) {

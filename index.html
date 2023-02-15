@@ -23,9 +23,9 @@
     </navbar>
     <div id="sideMenu" class="sideMenuClose">
         <div class="sideMenuSubMenu">
-            <a class="sideMenuTitle">Présentation</a>
+            <button class="sideMenuTitle" onclick="goTo('mainWindow')">Présentation</button>
             <div class="sideMenuSubMenuItem">
-                <a>In a nutshell</a>
+                <button onclick="goTo('inANutshell')">In a nutshell</button>
                 <a>Projets à l'affiche</a>
             </div>
         </div>
@@ -44,13 +44,16 @@
     </div>
 
     <main>
-        <img id="background_img" class="background_imgFull" src="./assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
-        <div id="mainWindow">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat velit metus, ultrices iaculis lorem egestas a. Aenean iaculis, lectus a bibendum fermentum, elit sem placerat est, sed malesuada mi velit sed mauris. Vestibulum euismod tristique rhoncus. Mauris est sapien, sodales vitae odio et, aliquam convallis dolor. Maecenas scelerisque iaculis eleifend. Donec non neque ac nisl gravida dictum. Integer viverra libero luctus lobortis porttitor. Pellentesque a nulla bibendum, volutpat nulla vitae, cursus elit. Proin sed ante eu enim interdum pharetra at eu nibh.
-
-Morbi sodales vel neque eget auctor. Phasellus mollis urna purus, id pretium mauris vulputate sed. Suspendisse auctor congue ipsum eget vehicula. Cras mollis hendrerit venenatis. In eget posuere nulla, eu commodo enim. Donec eget tempus turpis. Aliquam ipsum massa, tempus quis arcu non, commodo porta augue. Vestibulum dapibus elit id sem volutpat malesuada. Donec semper tempor orci. Cras lorem metus, accumsan nec diam vitae, auctor dignissim velit. Morbi aliquet ipsum id nisi ultricies, accumsan varius ante pellentesque. Duis non mi eget arcu commodo condimentum.
-
-Nam scelerisque in purus ut cursus. Mauris faucibus blandit augue si
+        <img id="background_img" class="Full" src="./assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
+        <div id="mainWindow" class="Full">
+            <h1>Fabien ARTHUR, étudiant informatique</h1>
+            <div class="leftBlockText">
+                <h2 id="inANutshell">In a Nutshell</h2>
+                <p>&emsp;Je suis un étudiant en informatique à l’école Ynov Campus.... Lorem ipsum
+                    dolor sit amet, consectetur adipiscing elit.<br><br>
+                    Maecenas scelerisque iaculis eleifend. Donec non neque ac nisl gravida dictum. Integer viverra libero luctus lobortis porttitor. Pellentesque a nulla bibendum, volutpat nulla vitae, cursus elit.
+                </p>
+            </div>
         </div>
     </main>
 </body>
@@ -75,6 +78,13 @@ Nam scelerisque in purus ut cursus. Mauris faucibus blandit augue si
             bgImg.classList.add('NotFull');
             mWindow.classList.remove('Full');
             mWindow.classList.add('NotFull');
+        }
+    }
+
+    function goTo(elm) {
+        document.getElementById(elm).scrollIntoView(true, {behavior: 'smooth'})
+        if (window.innerWidth < 600) {
+            sideMenu()
         }
     }
 </script>
