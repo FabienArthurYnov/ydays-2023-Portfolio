@@ -37,7 +37,7 @@ navbar {
     right: 0;
     left: 0;
     justify-content: space-around;
-    align-items: center;
+    align-items:flex-start;
     height: 10vh;
     background-color: #050A32;
     color: white;
@@ -47,11 +47,33 @@ navbar {
     z-index: 2;
 }
 
-navbar button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+navbar .btnNavText {
+    padding-top: 0.5%;
 }
+.btnNavText a {
+    padding: 10px;
+}
+.btnNavText:hover {
+    background: #1E1E1E;
+    position: relative;
+}
+.btnNavText:hover .dropDownList {
+    display: flex;
+    flex-direction: column;
+}
+.dropDownList{
+    background: #1E1E1E;
+    position: relative;
+    display: none;
+    flex-direction: column ;
+    font-size: 22px;
+    font-family: Yrsa;
+    margin-top: 10%;
+}
+.btnNavText:hover .dropDownList :hover {
+    background-color: #727a83;
+}
+
 
 
 /* SIDE MENU ---------------*/
