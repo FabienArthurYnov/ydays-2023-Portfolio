@@ -47,9 +47,6 @@ navbar {
     z-index: 2;
 }
 
-navbar .btnNavText {
-    padding-top: 20px;
-}
 .btnNavText a {
     padding: 10px;
 }
@@ -182,6 +179,18 @@ h1 {
     font-weight: normal;
     font-size: 35px;
     text-decoration: underline;
+}
+
+.alignInside {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.alignInside img {
+    max-width: 400px;
+}
+.alignInside .leftBlockText {
+    padding: 20px;
 }
 
 .projectGrid {
