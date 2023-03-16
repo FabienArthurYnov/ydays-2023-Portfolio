@@ -260,7 +260,8 @@ h1 {
     }
 
     navbar {
-        font-size: 36px;
+        font-size: 26px;
+        padding: 0px;
     }
     .projectCard {
         width: 300px;
