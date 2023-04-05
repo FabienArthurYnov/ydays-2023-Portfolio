@@ -19,20 +19,18 @@
             </svg>
         </button>
         <div class="btnNavText">
-            <a href="#">Home</a>
+            <a href="./index.html">Home</a>
             <div class="dropDownList">
-                <a href="./index.html">Ydays</a>
             </div>
         </div>
         <div class="btnNavText">
-            <a href="#">Années</a>
+            <a class="unclickable">Années</a>
             <div class="dropDownList">
-                <a href="./index.html">Bachelor 1</a>
-                <a href="./index.html">Baccalauréat</a>
+                <a href="./annees/bachelor1.html">Bachelor 1</a>
             </div>
         </div>
         <div class="btnNavText">
-            <a href="#">Projets</a>
+            <a class="unclickable">Projets</a>
             <div class="dropDownList">
                 <a href="./index.html">DevWeb</a>
                 <a href="./index.html">Golang</a>
@@ -41,7 +39,7 @@
             </div>
         </div>
     </navbar>
-    <div id="sideMenu" class="">
+    <div id="sideMenu" class="sideMenuClose">
         <div class="sideMenuSubMenu">
             <button class="sideMenuTitle" onclick="goTo('mainWindow')">Présentation</button>
             <div class="sideMenuSubMenuItem">
@@ -52,7 +50,9 @@
         <div class="sideMenuSubMenu">
             <button class="sideMenuTitle" onclick="goTo('formationTitle')">Formation</button>
             <div class="sideMenuSubMenuItem">
+                <button onclick="goTo('ydays')">Ydays</button>
                 <button onclick="goTo('competencesTitle')">Compétences</button>
+                
             </div>
         </div>
         <div class="sideMenuSubMenu">
@@ -63,42 +63,54 @@
     </div>
 
     <main>
-        <img id="background_img" class="NotFull" src="./assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
-        <div id="mainWindow" class="NotFull">
+        <img id="background_img" class="Full" src="./assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
+        <div id="mainWindow" class="Full">
             <h1>Fabien ARTHUR, étudiant informatique</h1>
-            <div class="leftBlockText">
+            <div class="left blockText">
                 <h2 id="inANutshell">In a Nutshell</h2>
-                <p>&emsp;Je suis un étudiant en informatique à l’école Ynov Campus.... Lorem ipsum
-                    dolor sit amet, consectetur adipiscing elit.<br><br>
-                    Maecenas scelerisque iaculis eleifend. Donec non neque ac nisl gravida dictum. Integer viverra libero luctus lobortis porttitor. Pellentesque a nulla bibendum, volutpat nulla vitae, cursus elit.
-                </p>
+                <p>&emsp;Je suis un étudiant en informatique de 18 ans à l’école Ynov Campus suivant une formation de bachelor informatique
+                    <br><br>
+                    Ayant toujours été intéressé par le numérique et le domaine de l'informatique, je vous présente sur ce site les divers projets réaliser dans le cadre de ma formation.</p>
             </div>
             <div class="middleTitle" id="projetsAffiche">Projets à l'affiche
             </div>
             <div class="projectGrid">
-                <a class="projectCard">
-                    <img src="./assets/Images/Projets/1st Game Unity/image.png" alt="UnityGame">
+                <a class="projectCard" id="challenge48h">
+                    <img src="../assets/projets/dataTrack/dataTrack_title.png" alt="dataTrack_title">
                     <div class="textProjectCard">
-                        <h3>Platformer Game</h3>
-                        <h4>Unity</h4>
-                        <p>&emsp;Un petit jeu fais en quelques heures dans le cadre d'un Ydays, en option, afin d'apprendre les bases de Unity, comprennant du parcours ainsi que des pièges et énigmes simple</p>
+                        <h3>DataTrack</h3>
+                        <h4>Challenge 48h</h4>
+                        <p>&emsp;48h. Le but ? Imaginer un projet répondant à un problème du monde digital sur le thème de la citoyenneté, par groupe de 5.<br>Projet ayant atteint la seconde place, sur 50 groupes</p>
                     </div>
                 </a>
                 <a class="projectCard">
-                    <img src="./assets/Images/Projets/Portfolio Web/Home.png" alt="UnityGame">
+                    <img src="./assets/projets/Portfolio Web/Home.png" alt="UnityGame">
                     <div class="textProjectCard">
                         <h3>Portfolio Web</h3>
                         <h4>Dev Web</h4>
-                        <p>&emsp;Ce site !<br> Fais dans le cadre d'un Ydays, en option, c'est le résultat de l'acquisition de nouvelles compétences en développement web, avec l'html et le css.</p>
+                        <p>&emsp;Ce site !<br> Fais dans le cadre d'un Ydays, c'est le résultat de l'acquisition de nouvelles compétences en développement web, avec l'html et le css.</p>
                     </div>
                 </a>
             </div>
             <div class="middleTitle" id="formationTitle">Formation</div>
             <div class="alignInside">
-                <div class="leftBlockText">
-                    &emsp;[Présentation Ynov / parcours] <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                <div class="left blockText">
+                    &emsp;Après un baccalauréat spécialité Numériques & Sciences Informatiques et Mathématiques, mention très bien au lycée Paul Lapie à Courbevoie, j'ai commencé à suivre une formation de bachelor informatique à Paris Ynov Campus, situé 12 rue Anatole France à Nanterre.
+                    <br><br>
+                    Cette école du numérique à pour particularité d'être très centré sur le travail collectif et la création de projets concrets, comme le montre ce portfolio.
+                    <a href="https://www.ynov-paris.com/">Site officiel Ynov</a>
                 </div>
                 <img src="./assets/Images/Other/YnovExterior.jpg">
+            </div>
+            <div class="middleTitle" id="Ydays">Ydays</div>
+            <div class="alignInside">
+                <img src="./assets/Images/Other/ydays_exemple.png">
+                <div class="right blockText">
+                    &emsp;Les Ydays sont une initiative d'Ynov réservant tous les mercredis pour des projets multi-filières, aboutissant en générale à deux projets variés en fin d'année.
+                    <br>Les étudiants en choisissent deux qu'ils feront tout au long de l'année, cela pouvant être la création d'une application, des concours de CTF, ou encore la création d'un langage de programmation ! (Ecla).
+                    <br><a href="https://ydays.ynov.com/projects">Site des Ydays</a>
+                
+                </div>
             </div>
 
             <div class="middleTitle" id="competencesTitle">Compétences</div>
@@ -108,7 +120,7 @@
                     <li>- Go</li>
                     <li>- Js/html/css</li>
                     <li>- Java</li>
-                    <li>- Python</li>
+                    <li>- ~ Python</li>
                 </ul>
                 <ul>
                     Outils ; 
@@ -134,7 +146,7 @@
     <footer>
         <div class="alignInside">
             <span>Website by Fabien ARTHUR</span>
-            <span>Dans le cadre d'une formation à Paris Ynov Campus</span>
+            <!--<span>Dans le cadre d'une formation à Paris Ynov Campus</span>-->
         </div>
     </footer>
 </body>
