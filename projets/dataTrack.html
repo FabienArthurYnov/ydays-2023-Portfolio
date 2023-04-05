@@ -26,7 +26,7 @@
         <div class="btnNavText">
             <a class="unclickable">Années</a>
             <div class="dropDownList">
-                <a href="./bachelor1.html">Bachelor 1</a>
+                <a href="../annees/bachelor1.html">Bachelor 1</a>
             </div>
         </div>
         <div class="btnNavText">
@@ -41,11 +41,10 @@
     </navbar>
     <div id="sideMenu" class="sideMenuClose">
         <div class="sideMenuSubMenu">
-            <button class="sideMenuTitle" onclick="goTo('bachelor1Title')">Bachelor 1</button>
+            <button class="sideMenuTitle" onclick="goTo('projetTitle')">DataTrack</button>
             <div class="sideMenuSubMenuItem">
-                <button onclick="goTo('challenge48h')">Challenge 48h</button>
-                <button onclick="goTo('devWeb')">Dev Web</button>
-                <button onclick="goTo('Unity')">Unity</button>
+                <button onclick="goTo('projetDescription')">Description</button>
+                <button onclick="goTo('ressources')">Ressources</button>
             </div>
         </div>
     </div>
@@ -53,44 +52,49 @@
     <main>
         <img id="background_img" class="Full" src="../assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
         <div id="mainWindow" class="Full">
-            <h1 id="bachelor1Title">Bachelor 1</h1>
+            <h1 id="projetTitle">DataTrack</h1>
             <div class="center blockText">
-                <p>&emsp; En bachelor 1 (2022-2023), j'ai acquis des bases de compétences dans différents domaines, que ce soit le développement en différents langages, principalement Go, mais aussi le développement web ou le réseau. 
-                    <br><br> L'acquisition de ces bases se faisant souvent accompagner d'un projet, il y découlera donc beaucoup de petits projets d'apprentissage.
+                <p>&emsp; Le 3 et 4 avril 2023 eu lieu mon premier Challenge 48h. 
+                    <br>Le principe ? Tous les bachelors informatique réunis en 50 groupes de 5, pour proposé une solution pour l'un des problèmes du digital sur le thème de la sobriété, de l'accessibilité ou de la citoyenneté, organisé en partenariat avec <a href="https://www.latitudes.cc/">Latitudes</a>.
+                    <br>&emsp;Voici notre réponse vainqueur de la 2e place, pour le thème de la citoyenneté ; DataTrack.
                 </p>
             </div>
-            <div class="projectGrid">
-                <a class="projectCard" id="challenge48h">
-                    <img src="../assets/projets/dataTrack/dataTrack_title.png" alt="dataTrack_title">
-                    <div class="textProjectCard">
-                        <h3>DataTrack</h3>
-                        <h4>Challenge 48h</h4>
-                        <p>&emsp;48h. Le but ? Imaginer un projet répondant à un problème du monde digital sur le thème de la citoyenneté, par groupe de 5.<br>Projet ayant atteint la seconde place, sur 50 groupes</p>
-                    </div>
-                </a>
-                <a class="projectCard" id="Unity">
-                    <img src="../assets/projets/1st Game Unity/image.png" alt="UnityGame">
-                    <div class="textProjectCard">
-                        <h3>Platformer Game</h3>
-                        <h4>Unity</h4>
-                        <p>&emsp;Un petit jeu fais en quelques heures dans le cadre d'un Ydays, afin d'apprendre les bases de Unity, comprennant du parcours ainsi que des pièges et énigmes simple</p>
-                    </div>
-                </a>
-                <a class="projectCard" id="devWeb">
-                    <img src="../assets/projets/Portfolio Web/Home.png" alt="PortfolioWeb">
-                    <div class="textProjectCard">
-                        <h3>Portfolio Web</h3>
-                        <h4>Dev Web</h4>
-                        <p>&emsp;Ce site !<br> Fais dans le cadre d'un Ydays, en option, c'est le résultat de l'acquisition de nouvelles compétences en développement web, avec l'html et le css.</p>
-                    </div>
-                </a>
+            <img class="centerImg" src="../assets/projets/dataTrack/dataTrack_title.png" alt="dataTrack_title">
+                
+            <div id="projetDescription" class="blockText center">
+                <h2>Concept</h2>
+                <p>&emsp;Ce projet étant de l'idéation, nous avons poser le problème des informations laisser publiques sur les réseaux sociaux et sites internets et avons proposé une application afin d'aider à mitiger ce problème.</p>
+
+                <p>Membres du groupe; Luca Morgado (B2), Seifeddine Hassen & Keenan Szczepkowski (B3), Thomas Rucktooa & moi même (B1)</p>
+                <br>
             </div>
-        </div>
+            <div class="alignInside">
+                <div class="blockText left">
+                    <h2>Principe</h2>
+                    <p>
+                        &emsp; Cette application permettrait de récupéré les données de l'utilisateur publiques comme un numéro de téléphone ou une adresse, par du web scraping et les API des réseaux sociaux, pour permettre ensuite au client de supprimer ou rendre privé ses informations publiques.
+                        <br><br>&emsp;Cette application offrirais aussi des guides pour naviguer dans les paramètres des réseaux sociaux, pour par exemple supprimé un profil ou faire valoir son droit à l'oubli.
+                        <br>&emsp;Finalement, elle permettrait aussi alerter l'utilisateur des éventuels failles de sécurités apparaissant sur les réseau sociaux.
+                    </p>
+                    <br>
+                </div>
+                <img src="../assets/projets/dataTrack/dataTrack_maquette.png" alt="dataTrack_maquette">
+            </div>
+            <div id="ressources" class="blockText">
+                <h2>Ressources</h2>
+                <a href="../assets/projets/dataTrack/DataTrack_Presentation_2.pdf">Présentation complète</a>
+
+                <br><br>
+                <p>Pour aller plus loin : </p>
+                <a href="../assets/projets/dataTrack/Explication complète.pdf">Objectifs détaillés de l'application</a>
+                <a href="../assets/projets/dataTrack/modele_canvas.pdf">Modèle canvas</a>
+                
+            </div>
     </main>
     <footer>
         <div class="alignInside">
             <span>Website by Fabien ARTHUR</span>
-            <span>Dans le cadre d'une formation à Paris Ynov Campus</span>
+            <!--<span>Dans le cadre d'une formation à Paris Ynov Campus</span>-->
         </div>
     </footer>
 </body>
