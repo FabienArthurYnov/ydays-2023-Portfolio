@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Fabien ARTHUR</title>
+    <link rel="stylesheet" href="../assets/CSS/style.css">
+    <script src="../code/main.js"></script>
+</head>
+<body>
+    <navbar>
+        <button id="burger_menu_icon" onclick="sideMenu()">
+            <svg width="90px" height="90px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier"> <path d="M5 8H13.75M5 12H19M10.25 16L19 16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"></path> 
+                </g>
+            </svg>
+        </button>
+        <div class="btnNavText">
+            <a href="../index.html">Home</a>
+            <div class="dropDownList">
+            </div>
+        </div>
+        <div class="btnNavText">
+            <a class="unclickable">Années</a>
+            <div class="dropDownList">
+                <a href="./bachelor1.html">Bachelor 1</a>
+            </div>
+        </div>
+        <div class="btnNavText">
+            <a class="unclickable">Projets</a>
+            <div class="dropDownList">
+                <a href="./index.html">DevWeb</a>
+                <a href="./index.html">Golang</a>
+                <a href="./index.html">Linux</a>
+                <a href="./index.html">Unity / Unreal</a>
+            </div>
+        </div>
+    </navbar>
+    <div id="sideMenu" class="sideMenuClose">
+        <div class="sideMenuSubMenu">
+            <button class="sideMenuTitle" onclick="goTo('bachelor1Title')">Bachelor 1</button>
+            <div class="sideMenuSubMenuItem">
+                <button onclick="goTo('challenge48h')">Challenge 48h</button>
+                <button onclick="goTo('devWeb')">Dev Web</button>
+                <button onclick="goTo('Unity')">Unity</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <img id="background_img" class="Full" src="../assets/Images/Background/modern-design-with-light-golden-line_67845-488.jpg">
+        <div id="mainWindow" class="Full">
+            <h1 id="bachelor1Title">Bachelor 1</h1>
+            <div class="center blockText">
+                <p>&emsp; En bachelor 1 (2022-2023), j'ai acquis des bases de compétences dans différents domaines, que ce soit le développement en différents langages, principalement Go, mais aussi le développement web ou le réseau. 
+                    <br><br> L'acquisition de ces bases se faisant souvent accompagner d'un projet, il y découlera donc beaucoup de petits projets d'apprentissage.
+                </p>
+            </div>
+            <div class="projectGrid">
+                <a class="projectCard" id="challenge48h">
+                    <img src="../assets/projets/dataTrack/dataTrack_title.png" alt="dataTrack_title">
+                    <div class="textProjectCard">
+                        <h3>DataTrack</h3>
+                        <h4>Challenge 48h</h4>
+                        <p>&emsp;48h. Le but ? Imaginer un projet répondant à un problème du monde digital sur le thème de la citoyenneté, par groupe de 5.<br>Projet ayant atteint la seconde place, sur 50 groupes</p>
+                    </div>
+                </a>
+                <a class="projectCard" id="Unity">
+                    <img src="../assets/projets/1st Game Unity/image.png" alt="UnityGame">
+                    <div class="textProjectCard">
+                        <h3>Platformer Game</h3>
+                        <h4>Unity</h4>
+                        <p>&emsp;Un petit jeu fais en quelques heures dans le cadre d'un Ydays, afin d'apprendre les bases de Unity, comprennant du parcours ainsi que des pièges et énigmes simple</p>
+                    </div>
+                </a>
+                <a class="projectCard" id="devWeb">
+                    <img src="../assets/projets/Portfolio Web/Home.png" alt="PortfolioWeb">
+                    <div class="textProjectCard">
+                        <h3>Portfolio Web</h3>
+                        <h4>Dev Web</h4>
+                        <p>&emsp;Ce site !<br> Fais dans le cadre d'un Ydays, en option, c'est le résultat de l'acquisition de nouvelles compétences en développement web, avec l'html et le css.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="alignInside">
+            <span>Website by Fabien ARTHUR</span>
+            <span>Dans le cadre d'une formation à Paris Ynov Campus</span>
+        </div>
+    </footer>
+</body>
+
+</html>
