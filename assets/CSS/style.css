@@ -124,7 +124,6 @@ navbar {
     transition-duration: 0.35s;
 }
 #mainWindow {
-    height: 90vh;
     padding-top: 10vh;
     color: white;
     display: flex;
@@ -151,6 +150,11 @@ h1 {
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-weight: 500;
     padding: 50px;
+}
+ul {
+    list-style: none;
+    font-size: 24px;
+    font-family: Yrsa;
 }
 .leftBlockText {
     display:flex;
@@ -184,6 +188,7 @@ h1 {
 .alignInside {
     display: flex;
     align-items: flex-start;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .alignInside img {
@@ -203,6 +208,25 @@ h1 {
     width: 100%;
 }
 
+.competencesList {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.competencesList ul {
+    width: 200px;
+    margin-top: 30px;
+}
+.contactList {
+    margin-top: 10px;
+}
+.contactList li {
+    margin-top: 5px;
+}
+
+
+
 /* PROJECT CARD */
 .projectCard {
     display: flex;
@@ -218,7 +242,7 @@ h1 {
     border-color: #050A32;
 }
 .projectCard h3 {
-    padding: 5px;
+    margin: 5px;
     font-size: 35px;
     text-decoration: underline;
     font-weight: 500;
@@ -243,6 +267,20 @@ h1 {
 
 
 
+/* FOOTER */
+footer {
+    min-height: 50px;
+    background-color: #1E1E1E;
+    margin-top: 50px;
+    color: white;
+    font-size: 18px;
+    font-family: Yrsa;
+}
+footer span {
+    margin-top: 10px;
+}
+
+
 
 
 
@@ -262,13 +300,22 @@ h1 {
     }
 
     navbar {
-        font-size: 26px;
+        font-size: 25px;
         padding: 0px;
+    }
+    navbar .btnNavText {
+        padding-top: 20px;
     }
     .projectCard {
         width: 300px;
     }
     .alignInside img {
         max-width: 300px;
+    }
+
+    /* on passe en affichage en liste, en prenant presque toute la largeur*/
+    .competencesList ul {
+        width: 90%;
+        padding-left: 30px;
     }
 } 
